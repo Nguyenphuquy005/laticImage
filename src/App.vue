@@ -12,11 +12,12 @@
           >
             <v-flex>
               <div id="nav">
-                <app-navbar
+                <!-- show navbar -->
+                <!-- <app-navbar
                   :busyWorker="$store.getters['worker/busy']"
                   :busyInput="busyInput"
                   :workerReady="$store.getters['worker/ready']"
-                />
+                /> -->
               </div>
               <router-view />
             </v-flex>
@@ -29,14 +30,14 @@
 
 <script>
 
-import Navbar from '@/components/navigation/Navbar';
+// import Navbar from '@/components/navigation/Navbar';
 import { Logger } from '@/loggers/Logger';
 import { paramTypes } from '@/models/constants/params';
 
 
 export default {
   components: {
-    'appNavbar': Navbar,
+    // 'appNavbar': Navbar,
   },
   created() {
     this.$store.dispatch('settings/init');
